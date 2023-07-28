@@ -1,0 +1,841 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.displayNone {
+    display: none;
+}
+
+button {
+    display: flex;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+li {
+    cursor: pointer;
+}
+
+a:hover {
+    border-bottom: 1px solid black;
+    transition: 0.2s ease-in-out;
+}
+
+a:active {
+    color: rgb(118, 118, 118);
+    border-bottom: 1px solid rgb(118, 118, 118);
+    transition: 0.001s ease-in-out;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    bottom: initial;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1.5rem 1rem;
+    margin: 0 4% 1rem 4%;
+    border-bottom: 1px solid gray;
+}
+
+.logo-plus {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
+
+.mobileNavigation {
+    animation-name: comingFromLeftSide;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    position: fixed;
+    top: initial;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(167, 167, 167);
+    border-radius: 0 0 6px 0;
+    padding: 1rem 3rem;
+    width: fit-content;
+    height: 100dvh;
+}
+
+.mobileNavigation>div>h3 {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+
+.optionsList {
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0.4rem 0 0.8rem 0;
+}
+
+.optionsList>li>a:hover {
+    color: rgb(255, 61, 44);
+    border-bottom: 1px solid rgb(255, 61, 44);
+}
+
+.optionsList>li>a:active {
+    color: rgb(13, 13, 64);
+    border-bottom: 1px solid rgb(13, 13, 64);
+}
+
+@keyframes comingFromLeftSide {
+    from {
+        margin-left: -100%;        
+    }
+
+    to {
+        margin-left: initial;
+    }
+}
+
+.logo-plus>i {
+    display: none;
+}
+
+.logo-plus>h1 {
+    color: rgb(240, 81, 67);
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+}
+
+#colections {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bold;
+    border-bottom:1px solid rgb(240, 167,0);
+    width: 100%;
+}
+
+#showingColections {
+    animation-name: smokyApparition;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    text-align: center;
+    list-style: none;
+    position: absolute;
+    top: initial;
+    bottom: initial;
+    z-index: 2;
+    background-color: rgb(240, 167,0);
+    padding: 0.2rem;
+    margin: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+#showingColections>li {
+    margin-bottom: 1rem;
+}
+
+#products {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(255, 71, 120);
+}
+
+#showingProducts {
+    animation-name: smokyApparition;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    text-align: center;
+    list-style: none;
+    position: absolute;
+    top: initial;
+    bottom: initial;
+    z-index: 2;
+    background-color: rgb(255, 71, 120);
+    padding: 0.418rem;
+    margin: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+#showingProducts>li {
+    margin-bottom: 1rem;
+}
+
+#contact {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(255, 61, 44);
+}
+
+#showingContacts {
+    animation-name: smokyApparition;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    text-align: center;
+    list-style: none;
+    position: absolute;
+    top: initial;
+    bottom: initial;
+    z-index: 2;
+    background-color: rgb(255, 61, 44);
+    padding: 0.28rem;
+    margin: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+#showingContacts>li {
+    margin-bottom: 1rem;
+}
+
+#aboutShop {
+    font-size: 1.05rem;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+
+#aboutShop:hover {
+    border-bottom: 1px solid;
+    transition: 0.2s ease-in;
+}
+
+#aboutShop:active {
+    color: rgb(167, 167, 167);
+    border-bottom: 1px solid rgb(167, 167, 167);
+    transition: 0.001s ease-in;
+}
+
+.cart-avatar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cart-avatar>button {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+    clip-path: circle();
+}
+
+.cart-avatar>button:hover {
+    background-color: rgb(167, 167, 167);
+    transition: 0.2s ease-in-out;
+}
+
+#avatarLog>i {
+    clip-path: circle();
+    font-size: 25px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#avatarLog>i:hover {
+    background-color: rgb(167, 167, 167);
+    transition: 0.2s ease-in-out;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    margin: 3.5rem 12%;
+}
+
+.imageProducts {
+    width: 400px;
+}
+
+#mainProdcuts>img {
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.minProduct {
+    display: flex;
+    justify-content: space-between;
+}
+
+.minProduct>img {
+    border-radius: 15px;
+    cursor: pointer;
+    width: 80px;
+}
+
+.aboutProduct {
+    font-family: 'Roboto', sans-serif;
+    width: 60%;
+    margin-left: 8%;
+}
+
+.aboutProduct>h3 {
+    color: rgb(240, 167,0);
+}
+
+.aboutProduct>h2 {
+    font-size: 2rem;
+    margin: 1rem 0 1.8rem 0;
+}
+
+.aboutProduct>p {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 1.2rem;
+}
+
+.allPricePurchese {
+    display: flex;
+    flex-direction: column;
+}
+
+.priceAndOffer {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#offPrice {
+    color: orangered;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: rgb(216, 216, 216);
+    border-radius: 6px;
+    padding: 0.2rem 0.5rem;
+}
+ 
+.priceAndOffer>p {
+    margin: 0;
+}
+
+#truePrice {
+    color: rgb(118, 118, 118);
+    font-size: 1rem;
+    margin: 0.3rem 0 1rem 0;
+}
+
+.howProducts-addCart {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#howProducts {
+    display: flex;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 6px;
+}
+
+#howProducts>p {
+    font-weight: bold;
+    margin: 0 1.5rem;
+}
+
+#howProducts>button {
+    font-size: 1.7rem;
+    color: orangered;
+    height: fit-content;
+    background-color: inherit;
+    border: none;
+    border-radius: inherit;
+}
+
+#selectedProducts {
+    text-align: center;
+    background-color: inherit;
+    border: none;
+    width: 4rem;
+}
+
+#howProducts>button:hover {
+    background-color: rgb(167, 167, 167);
+    transition: 0.2s ease-in;
+}
+
+#howProducts>button:active {
+    background-color: rgb(134, 133, 133);
+    transition: 0.001s ease-in;
+}
+
+#addCart {
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    background-color: orangered;    
+    border: none;
+    border-radius: 6px;
+    padding: 0.35rem 5rem;
+}
+
+#addCart:hover {
+    background-color: rgb(249, 95, 40);
+    transition: 0.2s ease-in;
+}
+
+#addCart:active {
+    background-color: rgb(181, 48, 0);
+    transition: 0.001s ease-in;
+}
+
+#superimposedDivImageProducts {
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: inherit;
+    padding: 2rem 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100dvh;
+}
+
+#superimposedDivImageProducts>div>button {
+    clip-path: circle();
+    color: black;
+    background-color: white;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#superimposedImage {
+    width: 400px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.superimposedMinProduct {
+    display: flex;
+    justify-content: space-between;
+}
+
+.superimposedMinProduct>img {
+    border-radius: 15px;
+    cursor: pointer;
+    width: 80px;
+}
+
+.pop-upCart {
+    animation-name: smokyApparition;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    z-index: 4;
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 6.5rem;
+    bottom: inherit;
+    margin: 0;
+    width: 100%;
+}
+
+@keyframes smokyApparition {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.pop-upCartSubDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(216, 216, 216);
+    border-radius: 6px;
+    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+    width: fit-content;
+}
+
+.closePop-up {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 0.2rem;
+    width: fit-content;
+}
+
+#buttonClosePop-up {
+    clip-path: circle();
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 25%;
+    margin: 0 0 0.3rem 0;
+    padding: 0.2rem;
+}
+
+#buttonClosePop-up:hover {
+    background-color: rgb(167, 167, 167);
+    transition: 0.2s ease-in;
+}
+
+#buttonClosePop-up:active {
+    color: blue;
+    background-color: transparent;
+    transition: 0.001s ease-in;
+}
+
+.pop-upCartSubDiv>p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: orangered;
+    margin: 0 0 0.5rem 0;
+}
+
+.toCart>button {
+    font-weight: bold;
+    background-color: rgb(134, 133, 133);
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+}
+
+.toCart>button:hover {
+    border: 2px solid rgb(255, 71, 120);
+    transition: 0.2s ease-in;
+}
+
+.toCart>button:active {
+    background-color: rgb(118, 118, 118);
+    border: 2px solid transparent;
+    transition: 0.001s ease-in;
+}
+
+.allYourPurchase {
+    animation-name: comingFromRightSide;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 0;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(167, 167, 167);
+    width: fit-content;
+    height: 100dvh;
+}
+
+@keyframes comingFromRightSide {
+    from {
+        margin-right: -100%;        
+    }
+
+    to {
+        margin-right: initial;
+    }
+}
+
+.allYourPurchase>h4 {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    background-color: rgb(255, 133, 89);
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin: 0.7rem;
+}
+
+.yourPurchaseDiv {
+    display: none;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 133, 89);
+    border-radius: 6px;
+    margin: 1rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.yourPurchaseDiv>img {
+    border-radius: 6px;
+    width: 90px;
+}
+
+.yourPurchaseDiv>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 0.4rem;
+    height: 100%;
+}
+
+.yourPurchaseDiv>div>h4, .yourPurchaseDiv>div>p, .yourPurchaseDiv>div>div>p {
+    margin: 0;
+    padding: 0;
+}
+
+.yourPurchaseDiv>div>h4 {
+    font-size: 1.1rem;
+}
+
+.yourPurchaseDiv>div>div {
+    display: flex;
+}
+
+#priceYourPurchase {
+    padding: 0.1rem 0;
+}
+
+#offPriceYourPurchase {
+    font-weight: bold;
+    color: orangered;
+    margin-left: 0.5rem;
+    background-color: rgb(216, 216, 216);
+    border-radius: 6px;
+    padding: 0.1rem 0.3rem;
+}
+
+#amountYourPurchase {
+    color: rgb(118, 118, 118);
+    font-size: 0.8rem;
+}
+
+.finalButtonsYourPurchase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#closeDivallYourPurchase {
+    clip-path: circle();
+    font-size: 1.6rem;
+    margin: 0 0 1rem 1rem;
+    padding: 0.4rem;
+}
+
+#closeDivallYourPurchase:hover {
+    background-color: rgb(134, 133, 133);
+    transition: 0.2s ease-in;
+}
+
+#closeDivallYourPurchase:active {
+    color: blue;
+    background-color: transparent;
+    transition: 0.001s ease-in;
+}
+
+#buyButton {
+    font-size: 1.1rem;
+    font-weight:bold;
+    background-color: rgb(255, 61, 44);
+    border-radius: 6px;
+    margin: 0 1rem 1rem 0;
+    padding: 0.4rem 0.8rem;
+    height: fit-content;
+}
+
+#buyButton:hover {
+    background-color: rgb(255, 133, 89);
+    transition: 0.2s ease-in;
+}
+
+#buyButton:active {
+    background-color: transparent;
+    transition: 0.001s ease-in;
+}
+
+.completionBuy {
+    animation-name: smokyApparition;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.completionBuy>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(249, 95, 40);
+    border-radius: 18px;
+    padding: 2rem;
+    width: 20rem;
+    height: fit-content;
+}
+
+.completionBuy>div>i {
+    font-size: 5rem;
+    padding: 0;
+}
+
+.completionBuy>div>h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.9rem;
+}
+
+.completionBuy>div>p {
+    font-size: 1.3rem;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+#finalLink {
+    color: rgb(41, 41, 255);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width: fit-content;
+}
+
+#finalLink:hover {
+    color: rgb(216, 216, 216);
+    border-bottom: none; 
+}
+
+#finalLink:active {
+    color: rgb(41, 41, 255);
+}
+
+@media screen and (max-width: 720px) {
+    header {
+        border: none;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .logo-plus {
+        gap: 0;
+    }
+
+    .logo-plus>i {
+        color: rgb(13, 13, 64);
+        display: flex;
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-color: rgb(216, 216, 216);
+        border-radius: 3px;
+        margin-right: 0.5rem;
+        padding: 0.2rem;
+        cursor: pointer;
+    }
+
+    .logo-plus>i:hover {
+        background-color: rgb(118, 118, 118);
+        transition: 0.3s ease-in-out;
+    }
+
+    .logo-plus>i:active {
+        background-color: initial;
+        transition: 0.001s ease-in-out;
+    }
+
+    .logo-plus>div, #aboutShop {
+        display: none;
+    }
+
+    .cart-avatar {
+        gap: 0.3rem;
+    }
+    
+    .cart-avatar>button {
+        font-size: 1.5rem;
+        background-color: transparent;
+        border: none;
+        padding: 0.5rem;
+        clip-path: circle();
+    }
+    
+    .cart-avatar>button:hover {
+        background-color: rgb(167, 167, 167);
+        transition: 0.2s ease-in-out;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 2rem 0;
+    }
+
+    .imageProducts {        
+        margin: 0;
+        width: 100%;
+    }
+    
+    #mainProdcuts>img {
+        border-radius: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .minProduct {
+        display: none;
+    }
+
+    .aboutProduct {
+        width: fit-content;
+        margin: 0 6% 0 6%;
+    }
+    
+    .aboutProduct>h2 {
+        margin: 1rem 0 1.8rem 0;
+    }
+
+    .allPricePurchese {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0 2rem 0;
+        width: 100%;
+    }
+
+    #truePrice {
+        margin: 0;
+    }
+
+    .howProducts-addCart {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    #howProducts {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .divAddCart {
+        width: 100%;
+    }
+
+    #addCart {
+        display: flex;
+        justify-content: center;
+        font-size: 1.1rem;
+        padding: 0.5rem 2.5rem;
+        width: 100%;
+    }
+}

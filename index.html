@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&family=Permanent+Marker&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>AllFreeDo's | E-commerce e Balela</title>
+</head>
+<body>
+  <header>
+    <div class="logo-plus">
+      <i class="bi bi-list" id="openOptions"></i>
+      <h1 id="linkHomePage">AllFreeDo's</h1>
+      <div>
+        <div>
+          <button id="colections">Coleções<i class="bi bi-chevron-down"></i></button>
+        </div>
+        <ul id="showingColections" class="displayNone">
+          <li><a href="#">Verão</a></li>
+          <li><a href="#">Primavera</a></li>
+          <li><a href="#">Inverno</a></li>
+          <li><a href="#">Outono</a></li>
+        </ul>       
+      </div>
+      <div>
+        <div>
+          <button id="products">Produtos<i class="bi bi-chevron-down"></i></button>
+        </div>
+        <ul id="showingProducts" class="displayNone">
+          <li><a href="#">Executivo</a></li>
+          <li><a href="#">Casual</a></li>
+          <li><a href="#">Calçados</a></li>
+          <li><a href="#">Esporte</a></li>
+          <li><a href="#">EPI's</a></li>
+        </ul>
+      </div>
+      <div>
+        <div>
+          <button id="contact">Contatos<i class="bi bi-chevron-down"></i></button>
+        </div>
+        <ul id="showingContacts" class="displayNone">
+          <li><a href="#">Callcenter</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Telegram</a></li>
+        </ul>
+      </div>
+      <button id="aboutShop">Sobre</button>
+    </div>
+    <div class="cart-avatar">
+      <button id="showDivListCart"><i class="bi bi-cart3"></i></button>
+      <div id="avatarLog">
+        <i class="bi bi-person-fill"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="displayNone" id="mobileNavigation">
+      <div class="mobileNavigation">
+        <div>
+          <h3>Colecões</h3>
+          <ul class="optionsList">
+            <li><a href="#">Verão</a></li>
+            <li><a href="#">Primavera</a></li>
+            <li><a href="#">Inverno</a></li>
+            <li><a href="#">Outono</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Produtos</h3>
+          <ul class="optionsList">
+            <li><a href="#">Executivo</a></li>
+            <li><a href="#">Casual</a></li>
+            <li><a href="#">Calçados</a></li>
+            <li><a href="#">Esporte</a></li>
+            <li><a href="#">EPI's</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contatos</h3>
+          <ul class="optionsList">
+            <li><a href="#">Callcenter</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="imageProducts">
+      <div id="mainProdcuts">
+        <img id="centralImage" alt="Um tênis laranja mt legal.">
+      </div>
+      <div class="minProduct">
+        <img id="buttonImageOne" src="/images/image-product-1.jpg" alt="Um tênis laranja muito legal.">
+        <img id="buttonImageTwo" src="/images/image-product-2.jpg" alt="Um tênis laranja muito legal.">
+        <img id="buttonImageThree" src="/images/image-product-3.jpg" alt="Um tênis laranja muito legal.">
+        <img id="buttonImageFour" src="/images/image-product-4.jpg" alt="Um tênis laranja muito legal.">
+      </div>
+    </section>
+    <section class="aboutProduct">
+      <h3>ALLFREEDO's Inc.</h3>
+      <h2>Tênis de Outono (Edição Limitada)</h2>
+      <p>
+        Nessa edição especial você terá o 
+        <strong>conforto e os aromas cítricos</strong> da estação 
+        mais laranja do ano. Assim como as folhas, os preços também "caem". Segundo a tradição chinesa, estar em sintonia com 
+        os períodos naturais é um presságio de benção.
+      </p>
+      <div class="allPricePurchese">
+        <div class="priceAndOffer">
+          <p id="price">R$ 185,00</p>
+          <p id="offPrice">30%</p>
+        </div>
+        <p id="truePrice">R$ 240,50</p>
+      </div>
+      <section class="howProducts-addCart">
+        <div id="howProducts">
+          <button id="decreaseMore"><i class="bi bi-dash"></i></button>
+          <input id="selectedProducts" placeholder="0">
+          <button id="addMore"><i class="bi bi-plus"></i></button>
+        </div>
+        <div class="divAddCart">
+          <button id="addCart"><i class="bi bi-cart3"></i>Ao carrinho</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Os elementos fora do "main" são chamados por botões, "são divs ocultas". -->
+  <section id="superimposedDivImageProducts" class="displayNone">
+    <div>
+      <button id="showOrNotShowSuperimposed"><i class="bi bi-x"></i></button>
+      <div>
+        <img id="superimposedImage" alt="Um tênis muito legal, da cor laranja.">
+      </div>
+      <div class="superimposedMinProduct">
+        <img id="buttonSuperimposedImageOne" src="/images/image-product-1.jpg" alt="Um tênis laranja muito legal.">
+        <img id="buttonSuperimposedImageTwo" src="/images/image-product-2.jpg" alt="Um tênis laranja muito legal.">
+        <img id="buttonSuperimposedImageThree" src="/images/image-product-3.jpg" alt="Um tênis laranja muito legal.">
+        <img id="buttonSuperimposedImageFour" src="/images/image-product-4.jpg" alt="Um tênis laranja muito legal.">
+      </div>
+    </div>
+  </section>
+  <section class="pop-upCart" id="pop-upCart">
+    <div class="pop-upCartSubDiv">
+      <p id="alertProductsSelectds">
+        O(s) produto(s) escolhidos foram adicionados ao <i class="bi bi-cart3"></i>. 
+      </p>
+      <div class="toCart">
+        <button id="goToCartList">Ir ao <i class="bi bi-cart3"></i></button>
+      </div>
+    </div>
+    <div class="closePop-up">
+      <button id="buttonClosePop-up"><i class="bi bi-x"></i></button>
+    </div>
+  </section>
+  <section class="allYourPurchase" id="allYourPurchase">
+    <h4 id="alertNothingBought">Você ainda não escolheu nada😆</h4>
+    <div class="yourPurchaseDiv" id="yourPurchaseDiv">
+      <img id="imageYourPurchase" alt="Miniatura da compra: uma foto do produto, um tênis muito legal, da cor laranja">
+      <div>
+        <h4 id="titleYourPurchase"></h4>
+        <div>
+          <p id="priceYourPurchase"></p>
+          <p id="offPriceYourPurchase"></p>
+        </div>
+        <p id="amountYourPurchase"></p>
+      </div>
+    </div>
+    <div class="finalButtonsYourPurchase">
+      <button id="closeDivallYourPurchase"><i class="bi bi-x"></i></button>
+      <button id="buyButton">Comprar</button>
+    </div>
+  </section>
+  <section class="completionBuy" id="completionBuy">
+    <div>
+      <i class="bi bi-cart-check"></i>
+      <h1>STATUS DA COMPRA: REALIZADA.</h1>
+      <p>
+        Obrigado por comprar na <strong>AllFreeDos's</strong>, a loja 
+        mais sazonal. Volte sempre🥰
+      </p>
+      <a href="https://codepen.io/hudsonF13" target="_blank" id="finalLink">Ir à Homepage</a>
+    </div>
+  </section>
+  <!-- Os elementos fora do "main" são chamados por botões, "são divs ocultas". -->
+
+</body>
+<script src="index.js"></script>
+</html>
